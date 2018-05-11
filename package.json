@@ -1,0 +1,19 @@
+{
+  "name": "crud_mern",
+  "version": "1.0.0",
+  "description": "CRUD de un usuario con la pila Mysql,Express, React, Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisPerez94/CRUD_MERN.git"
+  },
+  "author": "Luis Perez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisPerez94/CRUD_MERN/issues"
+  },
+  "homepage": "https://github.com/LuisPerez94/CRUD_MERN#readme"
+}

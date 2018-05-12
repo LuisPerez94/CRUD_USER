@@ -28,10 +28,10 @@ block content
           ui.two.fields
             .ui.field
               label(for='phone')= "Telefono:"
-              input(type='number' name='phone')
+              input(type='number' name='phone' value=phone[0].phone)
             .ui.field
               label(for='email')= "Correo:"
-              input(type='email' name='email')
+              input(type='email' name='email' value=email[0].email)
               input(type='hidden' name='id_user' value=user[0].id_user)
 
           button.ui.basic.button.black= "Actualizar"

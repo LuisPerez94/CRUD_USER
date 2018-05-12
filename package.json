@@ -1,7 +1,7 @@
 {
   "name": "crud_mern",
   "version": "1.0.0",
-  "description": "CRUD de un usuario con la pila Mysql,Express, React, Node",
+  "description": "CRUD de un usuario con la pila Mysql,Express, Node",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

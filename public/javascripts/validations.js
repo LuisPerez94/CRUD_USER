@@ -45,7 +45,7 @@ $(function(){
          }
         ]
       },
-      email:{
+      RFC:{
         identifier: 'RFC',
         rules: [
          {

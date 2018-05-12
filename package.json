@@ -1,19 +1,19 @@
 {
-  "name": "crud_mern",
-  "version": "1.0.0",
-  "description": "CRUD de un usuario con la pila Mysql,Express, Node",
-  "main": "index.js",
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LuisPerez94/CRUD_MERN.git"
-  },
-  "author": "Luis Perez",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LuisPerez94/CRUD_MERN/issues"
-  },
-  "homepage": "https://github.com/LuisPerez94/CRUD_MERN#readme"
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "~1.4.3",
+    "dateformat": "^3.0.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.3",
+    "http-errors": "~1.6.2",
+    "jade": "^1.11.0",
+    "morgan": "~1.9.0",
+    "mysql": "^2.15.0"
+  }
 }

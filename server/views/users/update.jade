@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+  include ../templates/nav
+  .ui.container.grid.stackable
+    .sixteen.wide.column
+      h2.ui.header.green.dividing= 'Actualizar Usuario'
+
+      .form-newUser
+        form.ui.form(action='/updateUser' method='post')
+          .ui.field
+            label(for='name')= "Nombre(s):"
+            input(type='text' name='name' value=user[0].principal_name)
+          ui.two.fields
+            .ui.field
+              label(for='lastname')= "Primer Apellido:"
+              input(type='text' name='lastname' value=user[0].lastname)
+            .ui.field
+              label(for='middlename')= "Segundo Apellido:"
+              input(type='text' name='middlename' value=user[0].middlename)
+          ui.two.fields
+            .ui.field
+              label(for='bussinessname')= "Empresa:"
+              input(type='text' name='bussinessname' value=user[0].bussiness_name)
+            .ui.field
+              label(for='RFC')= "RFC:"
+              input(type='text' name='RFC' value=user[0].RFC)
+          ui.two.fields
+            .ui.field
+              label(for='phone')= "Telefono:"
+              input(type='number' name='phone')
+            .ui.field
+              label(for='email')= "Correo:"
+              input(type='email' name='email')
+              input(type='hidden' name='id_user' value=user[0].id_user)
+
+          button.ui.basic.button.black= "Actualizar"
+          .ui.message.error
+  script(src='javascripts/validations.js')

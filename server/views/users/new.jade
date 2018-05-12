@@ -1,0 +1,42 @@
+extends ../layout
+
+block content
+  include ../templates/nav
+  .ui.container.grid.stackable
+    .sixteen.wide.column
+      h2.ui.header.green.dividing= 'Nuevo Usuario'
+
+      .form-newUser
+        form.ui.form(action='/createUser' method='post')
+          .ui.field
+            label(for='name')= "Nombre(s):"
+            input(type='text' name='name')
+          ui.two.fields
+            .ui.field
+              label(for='lastname')= "Primer Apellido:"
+              input(type='text' name='lastname')
+            .ui.field
+              label(for='middlename')= "Segundo Apellido:"
+              input(type='text' name='middlename')
+          ui.two.fields
+            .ui.field
+              label(for='bussinessname')= "Empresa:"
+              input(type='text' name='bussinessname')
+            .ui.field
+              label(for='RFC')= "RFC:"
+              input(type='text' name='RFC')
+          ui.two.fields
+            .ui.field
+              label(for='phone')= "Telefono:"
+              input(type='number' name='phone')
+            .ui.field
+              label(for='email')= "Correo:"
+              input(type='email' name='email')
+          button.ui.basic.button.black= "Crear Usuario"
+          .ui.message.error
+      if info != undefined
+        .ui.message.success
+          i.close.icon
+          .header= 'Usuario Registrado'
+            p= info
+  script(src='javascripts/validations.js')

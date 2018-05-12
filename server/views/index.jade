@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  include templates/nav
+  .ui.container.grid.stackable
+    .sixteen.wide.column
+      h2.ui.header.green.dividing= 'Lista de usuarios'
+
+      table.ui.table.celled#tbl-users
+        thead
+          tr
+            th= "ID"
+            th= "Nombre"
+            th= "Empresa"
+            th= "RFC"
+            th= "Telefonos"
+            th= "Correos"
+            th= "Fecha de alta"
+            th= "Acciones"
+        tbody
+          each user in users
+            tr
+              td(id="id_user")= user.id_user
+              td= user.principal_name + ' ' + user.lastname + ' ' + user.middlename
+              td= user.bussiness_name
+              td= user.RFC
+              td= user.RFC
+              td= user.RFC
+              td= user.create_date
+              td
+                a.ui.button.basic.icon(href="#" data-tooltip="Eliminar" data-inverted="" id='btn-delete')
+                  i.trash.icon
+                a.ui.button.basic.icon(href='/updateUser/'+user.id_user data-tooltip="Modificar" data-inverted="")
+                  i.edit.icon
+  script(src="javascripts/users.js")
+
